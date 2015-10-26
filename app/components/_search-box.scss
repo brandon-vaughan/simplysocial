@@ -1,0 +1,42 @@
+/**
+ * Search Box
+ */
+
+.search-box {
+  display: inline-block;
+  margin-left: $layout-gutter;
+
+  &__field {
+    border: solid 1px $color-bg-utility-bar-alt;
+    border-radius: 5px;
+    padding: 5px 40px 5px 10px;
+    height: $utility-bar-height;
+    @extend %clearfix;
+
+    .button {
+      color: $color-bg-utility-bar-alt;
+      line-height: 15px;
+      margin-right: -30px;
+      float: right;
+    }
+
+    &__input {
+      background: transparent;
+      border: none;
+      color: $white;
+      font-family: $type-ff-default;
+      font-size: $type-size-action;
+      font-weight: 300;
+      line-height: 18px;
+      height: 18px;
+      outline: none;
+
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      float: left;
+    }
+  }
+}
+
+/********************************************/
