@@ -1,0 +1,96 @@
+/**
+ * Compose Message
+ */
+
+.compose-message {
+  border-radius: 3px;
+  background: $ghost;
+  text-align: left;
+
+  padding: $layout-gutter;
+
+  h1 {
+    color: $gray;
+    font-weight: 400;
+    font-size: $type-size-title;
+    margin: 0 0 10px;
+  }
+
+  &__message {
+    background: $white;
+    border-radius: 3px;
+    padding: $layout-gutter-min;
+    font-size: $type-size-input;
+    line-height: 24px;
+    min-height: 100px;
+    color: $gray;
+    outline: none;
+  }
+
+  &__media {
+    background: $white;
+    border: solid 1px $white;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    padding: 5px $layout-gutter-min;
+    font-size: $type-size-action;
+    line-height: 24px;
+    color: $gray;
+    outline: none;
+    margin-top: $layout-gutter-min;
+  }
+
+  &__footer {
+    padding-top: $layout-gutter;
+    @extend %clearfix;
+
+    .button--action {
+      color: $gray;
+      opacity: .5;
+      transition: opacity .3s;
+      float: left;
+      padding: 10px $layout-gutter-min 10px 0;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .button--primary {
+      float: right;
+    }
+  }
+}
+
+/********************************************/
+
+/*---- MODAL ----*/
+
+.modal .compose-message {
+  &__message {
+    transition: border .3s;
+
+    &:focus {
+      border: solid 1px $blue;
+    }
+
+    &:before {
+      opacity: 0;
+    }
+  }
+
+  @include bp(mobile) {
+    .button--action {
+      float: none;
+    }
+    .button--primary {
+      float: none;
+      display: block;
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+}
+
+/********************************************/
