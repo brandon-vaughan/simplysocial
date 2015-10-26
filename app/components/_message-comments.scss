@@ -1,0 +1,50 @@
+/**
+ * Message Comments
+ */
+
+[contenteditable=true]:empty:before {
+  content: attr(data-placeholder);
+  display: block; /* For Firefox */
+}
+
+.section--well {
+  background: $color-bg-well;
+  border-radius: 0 0 3px 3px;
+
+}
+
+.comments {
+
+  .social-message {
+    margin: 0;
+    border: none;
+    border-top: solid 1px $color-bg-divider;
+  }
+
+  &__reply {
+    border-top: solid 1px $color-bg-divider;
+    padding: $layout-gutter;;
+
+    &__field {
+      border: solid 1px $ghost;
+      border-radius: 3px;
+      background: $white;
+      color: $gray;
+      font-size: $type-size-action;
+      line-height: $type-size-action;
+      padding: $layout-gutter-min;
+      outline: none;
+      transition: border .3s;
+
+      &:focus {
+        border-color: $blue;
+      }
+
+      &:before {
+        color: $gray-light;
+      }
+    }
+  }
+}
+
+/********************************************/
