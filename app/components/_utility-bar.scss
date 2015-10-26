@@ -1,0 +1,51 @@
+/**
+ * Utility Bar Styles
+ */
+
+$utility-bar-height: 30px;
+
+// Make space for header
+body {
+  padding-top: $utility-bar-height + ($layout-gutter-min * 2);
+}
+
+.utility-bar {
+  background: $color-bg-utility-bar;
+  padding: $layout-gutter-min $layout-gutter;
+  height: $utility-bar-height + ($layout-gutter-min * 2);
+
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+
+  .icon-logo {
+    height: $utility-bar-height;
+  }
+
+  // Actions
+  &__actions {
+    float: right;
+
+    @include bp(mobile) {
+      .search-box {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    color: $brand;
+    font-size: $type-size-icon;
+  }
+
+  .icon-compose {
+    color: $brand;
+    float: left;
+    line-height: $utility-bar-height;
+  }
+}
+
+/********************************************/
