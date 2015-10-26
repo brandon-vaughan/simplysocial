@@ -1,0 +1,21 @@
+{
+  "name": "Jessica Tuan",
+  "firstname": "Jessica",
+  "lastname": "Tuan",
+  "email": "jessica@mail.com",
+  "avatar": "/assets/avatar-jessica-tuan.png",
+  "bio": "Designer and Developer living in San Diego, CA",
+  "website": "jesicatuan.com",
+  "notifications": {
+    "favorites": true,
+    "mentions": true,
+    "replies": true,
+    "follows": true
+  },
+  "privacy": {
+    "tag": 3,
+    "location": true,
+    "email_address": "true",
+    "ads": true
+  }
+}
