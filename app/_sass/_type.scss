@@ -1,0 +1,24 @@
+/**
+ * Basic Typography Styles
+ */
+
+h1 {
+  color: $color-fg-title;
+  font-size: $type-size-heading;
+  font-weight: 400;
+}
+
+h2 {
+  color: $color-fg-heading-sub;
+  font-size: $type-size-heading-sub;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+hr {
+  border: none;
+  border-top: solid 1px $ghost;
+  margin: $layout-gutter 0;
+}
+
+/********************************************/

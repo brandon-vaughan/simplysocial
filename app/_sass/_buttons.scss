@@ -1,0 +1,63 @@
+/**
+ * Button Styles
+ */
+
+.button {
+  background: transparent;
+  border: none;
+  display: inline-block;
+  font-family: $type-ff-default;
+  cursor: pointer;
+
+  &--outline {
+    border-radius: 3px;
+    border: solid 1px $gray-light;
+    color: $color-fg-action;
+    font-size: $type-size-action-sub;
+    padding: 5px 20px;
+  }
+
+  &--primary {
+    background: $brand-dark;
+    border-radius: 3px;
+    color: $white;
+    font-size: $type-size-action;
+    line-height: $type-size-action;
+    font-weight: 600;
+    padding: 10px $layout-gutter;
+    display: inline-block;
+    transition: background .3s;
+
+    &:hover {
+      background: $brand-dark-hover;
+    }
+  }
+
+  &--text {
+    text-decoration: none;
+  }
+
+  &--action {
+    font-family: $type-ff-default;
+    font-size: $type-size-action;
+
+    &:before {
+      font-size: 18px;
+      float: left;
+      line-height: $type-size-action;
+      margin-right: 10px;
+    }
+  }
+
+  &--action--sub {
+    color: $color-fg-action;
+    font-size: $type-size-action-sub;
+    padding: 0;
+
+    &:hover {
+      color: darken($color-fg-action, 10%);
+    }
+  }
+}
+
+/********************************************/

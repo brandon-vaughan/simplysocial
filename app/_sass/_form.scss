@@ -1,0 +1,93 @@
+/**
+ * Form Styles
+ */
+
+.form {
+
+  &--input {
+    background: transparent;
+  }
+
+  &__input {
+    transition: border .3s;
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+  &__label {
+    display: block;
+    color: $gray;
+    font-size: $type-size-input;
+    line-height: $layout-gutter;
+    padding: 10px 0;
+    padding-left: (($layout-gutter * 2) + $layout-gutter-min);
+    @extend %clearfix;
+  }
+
+  &__toggle {
+    display: block;
+    float: left;
+    width: $layout-gutter * 2;
+    margin-left: -(($layout-gutter * 2) + $layout-gutter-min);
+    border-radius: 20px;
+    height: $layout-gutter;
+    background: $ghost;
+    cursor: pointer;
+    outline: none;
+    @extend %clearfix;
+    transition: background .3s;
+
+    &:before {
+      content: '';
+      border-radius: 50%;
+      background: $white;
+      display: block;
+      margin: 1px;
+      height: 23px;
+      width: 23px;
+      position: relative;
+      left: 0;
+
+      transition: left .15s ease-in;
+    }
+
+    &--on {
+      background: $brand-dark;
+      &:before {
+        left: 25px;
+      }
+    }
+  }
+
+  &__radio {
+    float: left;
+    margin-left: -(($layout-gutter * 1.5) + $layout-gutter-min);
+    width: 23px;
+    height: 23px;
+    display: block;
+    border-radius: 50%;
+    border: solid 1px $ghost;
+
+    &--on {
+      &:before {
+        content: '';
+        background: $brand-dark;
+        border-radius: 50%;
+        text-align: center;
+        margin: 3px auto 0;
+        width: 15px;
+        height: 15px;
+        display: block;
+      }
+    }
+
+    input {
+      opacity: 0;
+      height: 23px;
+      width: 23px;
+    }
+  }
+}
+
+/********************************************/

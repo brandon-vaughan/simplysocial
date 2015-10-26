@@ -1,0 +1,115 @@
+/**
+ * Theme Variables
+ *
+ * Colors
+ * Type
+ * Layout
+ */
+
+/*---- COMMENT ----*/
+
+/********************************************/
+
+/*---- COLORS ----*/
+
+$slate: #262728;
+$slate-alt: #4B4F54;
+$slate-light: #3F454D;
+$gray: #70767f;
+$gray-light: #BEC3CC;
+$ghost: #DEE1E5;
+$ghost-light: #F9FAFB;
+$ghost-light-alt: #EEF0F2;
+$white: #FFF;
+
+$brand: #00CC99;
+$brand-light: #4CFFD2;
+$brand-dark: #00B286;
+$brand-dark-hover: #21cf99;
+$brand-darker: #007F60;
+
+$blue: #31B9FF;
+$red: #FF4F4F;
+$red-light: #FFE6E6;
+
+$color-bg-utility-bar: $slate;
+$color-bg-utility-bar-alt: $slate-alt;
+$color-fg-utility-bar: $brand;
+
+$color-bg-dropdown: $ghost-light;
+$color-bg-dropdown-border: $ghost;
+$color-fg-dropdown: $gray;
+
+$color-bg-hero-compose: rgba($brand-dark, .7);
+
+$color-fg-nav: $gray-light;
+$color-fg-nav-active: $white;
+$color-fg-nav-active-border: $brand;
+
+$color-fg-nav-sub: $brand;
+$color-fg-nav-sub-copy: $gray;
+
+$color-fg-heading-sub: $gray;
+$color-fg-title: $slate-light;
+$color-fg-default: $gray;
+$color-fg-link: $gray-light;
+$color-fg-action: $gray-light;
+
+$color-bg-well: $ghost-light;
+$color-bg-divider: $ghost-light-alt;
+
+$color-bg-border: $ghost;
+
+$color-fg-placeholder: $gray-light;
+$color-fg-input: $slate-light;
+$color-bg-input: $white;
+
+/********************************************/
+
+/*---- TYPE ----*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+$type-ff-default: 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+$type-size-icon: 25px;
+$type-size-heading: 30px;
+$type-size-heading-sub: 13px;
+$type-size-title: 16px;
+$type-size-nav: 12px;
+$type-size-nav-sub: 11px;
+$type-size-default: 15px;
+$type-size-input: 16px;
+$type-size-action: 14px;
+$type-size-action-sub: 12px;
+$type-height-default: 24px;
+
+/********************************************/
+
+/*---- LAYOUT ----*/
+
+$layout-avatar: 40px;
+
+$layout-col: 75px;
+$layout-gutter: 25px;
+$layout-gutter-min: 15px;
+$layout-container: ($layout-col * 6) + ($layout-gutter * 5);
+$layout-container-max: ($layout-col * 12) + ($layout-gutter * 11);
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin bp($point) {
+  @if $point == mobile {
+    @media (max-width: $layout-container) { @content; }
+  }
+  @if $point == not-mobile {
+    @media (min-width: $layout-container) { @content; }
+  }
+}
+
+/********************************************/

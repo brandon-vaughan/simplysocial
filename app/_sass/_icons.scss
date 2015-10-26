@@ -1,0 +1,121 @@
+/**
+ * Icons
+ */
+
+.icon-logo {
+  background: url(data:img/png;base64,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);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 137px;
+  height: 25px;
+  display: inline-block;
+  outline: none;
+}
+
+.icon-toggle {
+  &-down:before,
+  &-up:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    float: right;
+  }
+
+  &-down:before {
+    border-top: 5px solid $color-fg-action;
+  }
+  &-up:before {
+    border-bottom: 5px solid $color-fg-action;
+  }
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('/styles/fonts/icomoon.eot?wwbec0');
+  src:url('/styles/fonts/icomoon.eot?wwbec0#iefix') format('embedded-opentype'),
+    url('/styles/fonts/icomoon.ttf?wwbec0') format('truetype'),
+    url('/styles/fonts/icomoon.woff?wwbec0') format('woff'),
+    url('/styles/fonts/icomoon.svg?wwbec0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-email:before {
+  content: "\e912";
+}
+.icon-user:before {
+  content: "\e913";
+}
+.icon-compose:before {
+  content: "\e911";
+}
+.icon-close:before {
+  content: "\e910";
+}
+.icon-tile:before {
+  content: "\e901";
+}
+.icon-toggle-on:before {
+  content: "\e902";
+}
+.icon-toggle-off:before {
+  content: "\e903";
+}
+.icon-list:before {
+  content: "\e904";
+}
+.icon-password:before {
+  content: "\e900";
+}
+.icon-play:before {
+  content: "\e905";
+}
+.icon-video:before {
+  content: "\e906";
+}
+.icon-photo:before {
+  content: "\e907";
+}
+.icon-like:before {
+  content: "\e908";
+}
+.icon-search:before {
+  content: "\e909";
+}
+.icon-reply:before {
+  content: "\e90a";
+}
+.icon-comment:before {
+  content: "\e90b";
+}
+.icon-favorite:before {
+  content: "\e90c";
+}
+.icon-setting:before {
+  content: "\e90d";
+}
+.icon-trash:before {
+  content: "\e90e";
+}
+.icon-alert:before {
+  content: "\e90f";
+}
+
+/********************************************/

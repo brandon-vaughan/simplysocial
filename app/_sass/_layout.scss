@@ -1,0 +1,34 @@
+/**
+ * Layout Styles
+ */
+
+.layout {
+
+  &--container {
+    width: $layout-container;
+    margin: 0 auto;
+
+    @include bp(mobile) {
+      width: 100%;
+    }
+  }
+}
+
+/********************************************/
+
+/**
+ * Section Styles
+ */
+.section {
+
+  &--header {
+    background: url(/assets/header-bg.png) no-repeat bottom center;
+    background-size: cover;
+    padding-top: ($layout-col + $layout-gutter);
+    width: 100%;
+    position: relative;
+    @extend %clearfix;
+  }
+}
+
+/********************************************/
