@@ -1,0 +1,33 @@
+/**
+ * User Dropdown
+ */
+
+/*---- COMMENT ----*/
+
+.user-dropdown {
+  display: inline-block;
+  margin-left: $layout-gutter;
+  position: relative;
+
+  &__avatar {
+    cursor: pointer;
+
+    &:before {
+      border-top-color: $color-bg-utility-bar-alt;
+      border-bottom-color: $color-bg-utility-bar-alt;
+      float: right;
+      line-height: 30px;
+      margin-left: 5px;
+      margin-top: 12px;
+    }
+
+    img {
+      width: $utility-bar-height;
+      height: $utility-bar-height;
+    }
+  }
+
+}
+
+/********************************************/
+
