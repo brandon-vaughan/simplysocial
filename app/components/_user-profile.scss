@@ -1,0 +1,29 @@
+/**
+ * User Profile
+ */
+
+.user-profile {
+
+  &__header {
+    color: $white;
+    font-size: $type-size-default;
+    text-align: center;
+
+    h1 { color: $white; }
+
+    a {
+      display: block;
+      color: $slate;
+      text-decoration: none;
+      margin: 10px 0 $layout-col;
+    }
+  }
+
+  @include bp(mobile) {
+    &__card {
+      padding: 0 $layout-gutter;
+    }
+  }
+}
+
+/********************************************/
