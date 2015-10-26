@@ -28,6 +28,11 @@
         }
       }
 
+      &__media {
+        background: rgba($white, .7);
+        border: none;
+      }
+
       &__footer .button--action {
         color: $white;
         opacity: .5;
