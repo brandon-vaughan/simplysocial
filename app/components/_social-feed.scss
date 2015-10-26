@@ -1,0 +1,61 @@
+/**
+ * Social Feed
+ */
+
+.social-feed {
+
+  &__header {
+
+    .compose-message {
+      background: $color-bg-hero-compose;
+      border-radius: 3px;
+      padding: $layout-gutter;
+      margin-bottom: $layout-col;
+
+      &__message {
+        background: transparent;
+        border: none;
+        color: $white;
+        margin: $layout-gutter 0;
+        font-size: $type-size-heading;
+        font-weight: 300;
+        line-height: 1;
+        outline: none;
+        min-height: 0;
+
+        &:before {
+          color: rgba($white, .5);
+        }
+      }
+
+      &__footer .button--action {
+        color: $white;
+        opacity: .5;
+        transition: opacity .3s;
+        margin-left: $layout-gutter;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .compose-message h1,
+    .compose-message .form__submit { display: none; }
+
+    @include bp(mobile) {
+      padding-top: 0;
+
+      .compose-message {
+        border-radius: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
+
+/********************************************/
