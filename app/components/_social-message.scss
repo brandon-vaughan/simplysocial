@@ -1,0 +1,249 @@
+/**
+ * Social Message
+ */
+
+$layout-message-tile: ($layout-col * 4) + ($layout-gutter * 3);
+$layout-message-list: $layout-container;
+
+.social-message {
+
+  border: solid 1px $ghost;
+  border-radius: 3px;
+
+  color: $color-fg-default;
+  font-size: $type-size-default;
+  line-height: $type-height-default;
+  font-weight: 400;
+
+  margin: $layout-gutter auto 0;
+  width: $layout-container;
+
+  a {
+    color: $color-fg-link;
+    text-decoration: none;
+    &:hover {
+      color: darken($color-fg-link, 10%);
+    }
+  }
+
+  &__header {
+    border-radius: 3px 3px 0 0;
+    padding: $layout-gutter;
+    padding-left:($layout-gutter + $layout-avatar + $layout-gutter-min);
+  }
+
+  &__avatar {
+    height: $layout-avatar;
+    width: $layout-avatar;
+    float: left;
+    margin-left: -($layout-avatar + $layout-gutter-min);
+  }
+
+  &__actions {
+    float: right;
+
+    &--footer {
+      display: none;
+    }
+
+    .button--action {
+      color: $color-fg-action;
+      font-size: $type-size-action;
+      display: inline-block;
+      margin-left: 5px;
+
+      &:before {
+        font-size: $type-size-action;
+        line-height: $type-size-action;
+        float: none;
+        margin: 0;
+      }
+
+      &:hover {
+        color: darken($color-fg-action, 10%);
+      }
+    }
+  }
+
+  &__author {
+    color: $color-fg-title;
+    font-size: $type-size-title;
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  &__text {
+
+  }
+
+  &__photo,
+  &__video {
+    position: relative;
+    border-radius: 0 0 3px 3px;
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0 0 3px 3px;
+    }
+  }
+
+  &__video {
+
+    &:before {
+      color: $white;
+      position: absolute;
+      z-index: 1000;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      font-size: 100px;
+      text-align: center;
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 500;
+      content: '';
+      background: rgba(0,0,0,.3);
+    }
+
+  }
+
+  .button--action--sub {
+    margin-top: $layout-gutter-min;
+  }
+
+  .button--action--sub:before {
+    margin: 4px 0 0 5px;
+  }
+
+  /********************************************/
+
+  /*---- MOBILE ----*/
+
+  @include bp(mobile) {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+
+
+    &__header {
+      padding: $layout-gutter $layout-gutter-min;
+      padding-left: ($layout-gutter-min + $layout-avatar + $layout-gutter-min);
+    }
+  }
+
+  /********************************************/
+
+}
+
+/********************************************/
+
+/*---- TILE ----*/
+
+.message-feed--tile {
+  column-count: 1;
+  column-gap: $layout-gutter;
+
+  margin: 0 auto;
+  text-align: center;
+
+  .social-message {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+
+    &__header {
+      padding-bottom: 0;
+    }
+
+    &__actions,
+    &__header .button--action--sub {
+      display: none;
+
+      &--footer {
+        display: block;
+        padding: $layout-gutter-min;
+        width: 100%;
+        text-align: right;
+
+        .button--action--sub {
+          float: left;
+          margin: 0;
+          margin-left: ($layout-gutter + $layout-avatar);
+        }
+      }
+    }
+    &__photo,
+    &__video {
+      margin-top: $layout-gutter;
+      border-radius: 0;
+      img {
+        border-radius: 0;
+      }
+    }
+  }
+
+  @media (min-width: ($layout-message-tile + ($layout-gutter * 2))) {
+    .social-message {
+      width: $layout-message-tile;
+    }
+  }
+
+  @media (min-width: (($layout-message-tile * 2) + ($layout-gutter * 1))) {
+    column-count: 2;
+    width: ($layout-message-tile * 2) + ($layout-gutter * 1);
+  }
+
+  @media (min-width: (($layout-message-tile * 3) + ($layout-gutter * 2))) {
+    column-count: 3;
+    width: $layout-container-max;
+  }
+
+}
+
+/********************************************/
+
+/*---- MODAL ----*/
+
+.social-message--modal {
+
+  .modal__container {
+    margin: 15% auto;
+  }
+
+  .social-message {
+    border: none;
+    text-align: left;
+    width: 100%;
+    border-radius: 3px;
+
+    &__header {
+      border-radius: 0;
+      background: $white;
+    }
+
+    .comments .social-message__header {
+      background: transparent;
+    }
+
+    &__photo,
+    &__video {
+      border-radius: 3px 3px 0 0;
+      img { border-radius: 3px 3px 0 0; }
+    }
+  }
+}
+
+/********************************************/
