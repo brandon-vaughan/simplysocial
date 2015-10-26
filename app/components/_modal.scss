@@ -1,0 +1,107 @@
+/**
+ * Modal Styles
+ */
+
+ @-webkit-keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  70% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  70% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20000;
+  overflow-y: auto;
+
+  background: url(/assets/modal-bg.png) no-repeat top center;
+  background-size: cover;
+  text-align: center;
+
+  &__container {
+    width: $layout-container;
+    margin: 20% auto 0;
+    position: relative;
+
+    animation: bounceInDown .9s ease-in-out;
+  }
+
+  &--large {
+    .modal__container {
+      width: 100%;
+      max-width: ($layout-col * 10) + ($layout-gutter * 9);
+    }
+  }
+
+  .button--close {
+    color: $color-fg-action;
+    position: absolute;
+    top: -30px;
+    right: -35px;
+    font-size: 20px;
+  }
+
+  @include bp(mobile) {
+
+    &__container {
+      width: 90%;
+    }
+    .button--close {
+      top: -35px;
+      right: 50%;
+      margin-right: -15px;
+    }
+  }
+
+}
+
+/********************************************/
