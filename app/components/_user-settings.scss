@@ -1,0 +1,108 @@
+/**
+ * User Settings
+ */
+
+.section--settings {
+  padding: $layout-col 0;
+}
+
+.user-settings {
+
+  &__account {
+
+    padding-left: 135px;
+    padding-right: $layout-col;
+
+    .form__field {
+      display: block;
+      margin: 10px 0;
+      position: relative;
+
+      height: 40px;
+      @extend %clearfix;
+
+
+      [class*="icon-"] {
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 15px;
+        line-height: 20px;
+        font-size: 20px;
+        padding: 4px 0;
+        color: $gray-light;
+      }
+      .icon-email:before { font-size: 14px; }
+
+      &__input {
+        background: transparent;
+        border: solid 1px $gray-light;
+        border-radius: 3px;
+        color: $slate-light;
+        font-family: $type-ff-default;
+        font-size: $type-size-input;
+        font-weight: 400;
+        line-height: 28px;
+        outline: none;
+
+        padding: 5px 10px 5px 50px;
+        margin: 0;
+        width: 100%;
+
+        &:focus {
+          border-color: $blue;
+        }
+
+        &--pass {
+          font-weight: 700;
+          letter-spacing: 4px;
+        }
+        &--pass.ng-valid {
+          border-color: $brand-dark;
+          color: $brand-dark;
+        }
+        &--pass.ng-valid + .icon-password {
+          color: $brand-dark;
+        }
+      }
+    }
+  }
+
+  .account {
+    &__avatar {
+      float: left;
+      margin-left: -135px;
+      width: 85px;
+    }
+  }
+}
+
+/********************************************/
+
+/*---- MOBILE ----*/
+
+@media (max-width: ($layout-container + ($layout-gutter * 2))) {
+  .section--settings {
+    padding: $layout-gutter;
+    width: 100%;
+  }
+
+  .user-settings {
+    &__account {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .account {
+      &__avatar {
+        display: block;
+        float: none;
+        margin: 0 auto $layout-gutter;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/********************************************/
+
